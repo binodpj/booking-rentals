@@ -16,7 +16,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://booking-rentals.vercel.app/", // Allow frontend
+    origin: "https://booking-rentals.vercel.app", // Allow frontend
     methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true, // Allow cookies/sessions
@@ -27,7 +27,7 @@ app.use(
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://booking-rentals.vercel.app/"
+    "https://booking-rentals.vercel.app"
   );
   res.setHeader("Access-Control-Allow-Credentials", "true");
   res.setHeader(

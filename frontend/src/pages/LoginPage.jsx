@@ -14,7 +14,7 @@ export const LoginPage = () => {
 
     try {
       //fetching data
-      const response = await fetch("https://localhost:8000/api/auth/login", {
+      const response = await fetch("http://localhost:8000/api/auth/login", {
         method: "POST",
         headers: {
           "content-Type": "application/json",

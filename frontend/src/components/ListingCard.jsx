@@ -50,7 +50,7 @@ const ListingCard = ({
   const patchWishList = async () => {
     if (user?._id !== createdBy._id) {
       const response = await fetch(
-        `https://localhost:8000/api/${user?._id}/${listingId}`,
+        `http://localhost:8000/api/${user?._id}/${listingId}`,
         {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
@@ -90,7 +90,7 @@ const ListingCard = ({
           {listingImagePaths.map((photo, index) => (
             <img
               key={index}
-              src={`https://localhost:8000/${photo.replace("public", "")}`}
+              src={`http://localhost:8000/${photo.replace("public", "")}`}
               alt={`photo ${index + 1}`}
               className="h-60 w-full flex-shrink-0 object-cover"
             />

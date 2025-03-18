@@ -17,7 +17,7 @@ const TripList = () => {
     try {
       setLoading(true);
       const response = await fetch(
-        `https://localhost:8000/api/${userId}/trips`,
+        `http://localhost:8000/api/${userId}/trips`,
         {
           method: "GET",
         },

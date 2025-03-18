@@ -21,7 +21,7 @@ const ListingDetails = () => {
   const getListingDetails = async () => {
     try {
       const details = await fetch(
-        `https://localhost:8000/api/listing/${listingId}`,
+        `http://localhost:8000/api/listing/${listingId}`,
         {
           method: "GET",
         },
@@ -73,7 +73,7 @@ const ListingDetails = () => {
       };
 
       const response = await fetch(
-        "https://localhost:8000/api/booking/create-booking",
+        "http://localhost:8000/api/booking/create-booking",
         {
           method: "POST",
           headers: {
@@ -113,7 +113,7 @@ const ListingDetails = () => {
                 className="h-40 w-64 rounded-2xl lg:h-64 lg:w-80"
               >
                 <img
-                  src={`https://localhost:8000/${item.replace("public", "")}`}
+                  src={`http://localhost:8000/${item.replace("public", "")}`}
                   alt="listing photos"
                   className="h-full w-full rounded-2xl object-cover"
                 />
@@ -134,7 +134,7 @@ const ListingDetails = () => {
           <hr className="my-4 text-gray-600" />
           <div className="flex items-center gap-6">
             <img
-              src={`https://localhost:8000/${listing.createdBy.profileImageUrl.replace("public", "")}`}
+              src={`http://localhost:8000/${listing.createdBy.profileImageUrl.replace("public", "")}`}
               alt="Profile Pic"
               className="h-16 w-16 rounded-full object-cover shadow-2xl"
             />

@@ -18,8 +18,8 @@ const Listings = () => {
       setLoading(true);
       const response = await fetch(
         selectedCategory === "All"
-          ? `https://localhost:8000/api/listing`
-          : `https://localhost:8000/api/listing?category=${selectedCategory}`,
+          ? `http://localhost:8000/api/listing`
+          : `http://localhost:8000/api/listing?category=${selectedCategory}`,
         { method: "GET" },
       );
 

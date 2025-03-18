@@ -128,7 +128,7 @@ const CreateListing = () => {
 
       //send post request
       const response = await fetch(
-        "https://localhost:8000/api/listing/create-listing",
+        "http://localhost:8000/api/listing/create-listing",
         {
           method: "POST",
           body: listingForm,

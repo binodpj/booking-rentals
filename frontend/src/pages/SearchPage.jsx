@@ -18,7 +18,7 @@ const SearchPage = () => {
   const getSearchListings = async () => {
     try {
       const response = await fetch(
-        `https://localhost:8000/api/listing/search/${search}`,
+        `http://localhost:8000/api/listing/search/${search}`,
         {
           method: "GET",
         },

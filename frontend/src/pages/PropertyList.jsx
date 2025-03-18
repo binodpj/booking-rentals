@@ -17,7 +17,7 @@ const PropertyList = () => {
   const getPropertyList = async () => {
     try {
       const response = await fetch(
-        `https://localhost:8000/api/${user._id}/properties`,
+        `http://localhost:8000/api/${user._id}/properties`,
         {
           method: "GET",
         },

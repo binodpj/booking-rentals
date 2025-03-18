@@ -17,7 +17,7 @@ const PropertyList = () => {
   const getPropertyList = async () => {
     try {
       const response = await fetch(
-        `http://localhost:8000/api/${user._id}/properties`,
+        `https://booking-rentals-api.vercel.app/api/${user._id}/properties`,
         {
           method: "GET",
         },

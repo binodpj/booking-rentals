@@ -14,13 +14,16 @@ export const LoginPage = () => {
 
     try {
       //fetching data
-      const response = await fetch("http://localhost:8000/api/auth/login", {
-        method: "POST",
-        headers: {
-          "content-Type": "application/json",
+      const response = await fetch(
+        "https://booking-rentals-api.vercel.app/api/auth/login",
+        {
+          method: "POST",
+          headers: {
+            "content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
         },
-        body: JSON.stringify({ email, password }),
-      });
+      );
 
       const loggedIn = await response.json();
 

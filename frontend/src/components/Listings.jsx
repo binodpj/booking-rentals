@@ -18,8 +18,8 @@ const Listings = () => {
       setLoading(true);
       const response = await fetch(
         selectedCategory === "All"
-          ? `http://localhost:8000/api/listing`
-          : `http://localhost:8000/api/listing?category=${selectedCategory}`,
+          ? `https://booking-rentals-api.vercel.app/api/listing`
+          : `https://booking-rentals-api.vercel.app/api/listing?category=${selectedCategory}`,
         { method: "GET" },
       );
 

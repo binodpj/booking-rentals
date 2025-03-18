@@ -65,7 +65,7 @@ const Navbar = () => {
           <FontAwesomeIcon icon={faBars} className="text-xl text-gray-500" />
           {user ? (
             <img
-              src={`http://localhost:8000/${user.profileImageUrl.replace("public", "")}`}
+              src={`https://booking-rentals-api.vercel.app/${user.profileImageUrl.replace("public", "")}`}
               alt="profile photo"
               className="h-8 w-8 rounded-full object-cover"
             />

@@ -21,7 +21,7 @@ const ListingDetails = () => {
   const getListingDetails = async () => {
     try {
       const details = await fetch(
-        `http://localhost:8000/api/listing/${listingId}`,
+        `https://booking-rentals-api.vercel.app/api/listing/${listingId}`,
         {
           method: "GET",
         },
@@ -73,7 +73,7 @@ const ListingDetails = () => {
       };
 
       const response = await fetch(
-        "http://localhost:8000/api/booking/create-booking",
+        "https://booking-rentals-api.vercel.app/api/booking/create-booking",
         {
           method: "POST",
           headers: {
@@ -113,7 +113,7 @@ const ListingDetails = () => {
                 className="h-40 w-64 rounded-2xl lg:h-64 lg:w-80"
               >
                 <img
-                  src={`http://localhost:8000/${item.replace("public", "")}`}
+                  src={`https://booking-rentals-api.vercel.app/${item.replace("public", "")}`}
                   alt="listing photos"
                   className="h-full w-full rounded-2xl object-cover"
                 />
@@ -134,7 +134,7 @@ const ListingDetails = () => {
           <hr className="my-4 text-gray-600" />
           <div className="flex items-center gap-6">
             <img
-              src={`http://localhost:8000/${listing.createdBy.profileImageUrl.replace("public", "")}`}
+              src={`https://booking-rentals-api.vercel.app/${listing.createdBy.profileImageUrl.replace("public", "")}`}
               alt="Profile Pic"
               className="h-16 w-16 rounded-full object-cover shadow-2xl"
             />

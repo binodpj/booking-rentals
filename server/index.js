@@ -16,11 +16,25 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
-    methods: ["POST", "GET"],
-    credentials: true,
+    origin: "http://localhost:5173", // Allow frontend
+    methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true, // Allow cookies/sessions
   })
 );
+
+// Explicitly adding headers for every response
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PATCH, PUT, DELETE"
+  );
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  next();
+});
+
 app.use(express.json());
 app.use(express.static("public"));
 

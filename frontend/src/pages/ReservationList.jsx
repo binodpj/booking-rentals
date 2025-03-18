@@ -17,7 +17,7 @@ const ReservationList = () => {
   const getReservationList = async () => {
     try {
       const response = await fetch(
-        `https://booking-rentals-api.vercel.app/api/${userId}/reservations`,
+        `https://localhost:8000/api/${userId}/reservations`,
         {
           method: "GET",
         },

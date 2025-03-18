@@ -47,13 +47,10 @@ const RegisterPage = () => {
         register_form.append(key, formData[key]);
       }
 
-      const response = await fetch(
-        "https://booking-rentals-api.vercel.app/api/auth/register",
-        {
-          method: "POST",
-          body: register_form,
-        },
-      );
+      const response = await fetch("https://localhost:8000/api/auth/register", {
+        method: "POST",
+        body: register_form,
+      });
 
       if (response.ok) {
         navigate("/login");

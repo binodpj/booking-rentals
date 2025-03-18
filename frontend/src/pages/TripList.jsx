@@ -17,7 +17,7 @@ const TripList = () => {
     try {
       setLoading(true);
       const response = await fetch(
-        `https://booking-rentals-api.vercel.app/api/${userId}/trips`,
+        `https://localhost:8000/api/${userId}/trips`,
         {
           method: "GET",
         },
